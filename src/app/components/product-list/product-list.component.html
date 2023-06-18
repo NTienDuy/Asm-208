@@ -1,0 +1,30 @@
+<div>
+    <a routerLink="/admin/product/add">Add Product</a>
+</div>
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Image</th>
+                <th>Product Name</th>
+                <th>Product Price</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody *ngIf="products && products.length">
+            <tr *ngFor="let product of products, index as i">
+                <td>{{i+1}}</td>
+                <td><img src="{{product.img}}" alt=""></td>
+                <td>{{product.name}}</td>
+                <td>{{product.price}}</td>
+                <td>
+                    <button (click)="removeItem(product.id)">
+                        Delete
+                    </button>
+                    <a routerLink="/admin/product/{{ product.id }}//edit">Update</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

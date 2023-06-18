@@ -2,28 +2,29 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ProductListComponent } from './product-list/product-list.component';
-import { HomepageComponent } from './pages/homepage/homepage.component';
-import { ProductpageComponent } from './pages/productpage/productpage.component';
-import { AdminproductComponent } from './pages/admin/adminproduct/adminproduct.component';
-import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
-import { ProductaddComponent } from './pages/admin/productadd/productadd.component';
-import { ProducteditComponent } from './pages/admin/productedit/productedit.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
-import { ProductdetailComponent } from './pages/productdetail/productdetail.component';
+import { ProductListComponent } from './components/product-list/product-list.component';
+import { HomePageComponent } from './pages/home-page/home-page.component';
+import { ProductPageComponent } from './pages/product-page/product-page.component';
+import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
+import { ProductAddComponent } from './pages/admin/product-add/product-add.component';
+import { ProductEditComponent } from './pages/admin/product-edit/product-edit.component';
+import { AdminProductComponent } from './pages/admin/admin-product/admin-product.component';
+import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductListComponent,
-    HomepageComponent,
-    ProductpageComponent,
-    ProductdetailComponent,
-    AdminproductComponent,
+    HomePageComponent,
+    ProductPageComponent,
+    ProductDetailComponent,
+    ProductAddComponent,
+    ProductEditComponent,
+    AdminProductComponent,
     DashboardComponent,
-    ProductaddComponent,
-    ProducteditComponent
   ],
   imports: [
     BrowserModule,
