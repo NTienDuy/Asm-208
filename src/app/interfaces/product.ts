@@ -1,6 +1,6 @@
-export interface IProduct {
-    id?: number;
+export interface IProduct{
+    id? : number;
     name: string;
     price: number;
-    img?: string;
+    img: string 
 }

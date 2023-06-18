@@ -1,25 +1,25 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
-import { ProductaddComponent } from './pages/admin/productadd/productadd.component';
-import { ProducteditComponent } from './pages/admin/productedit/productedit.component';
-import { HomepageComponent } from './pages/homepage/homepage.component';
-import { ProductdetailComponent } from './pages/productdetail/productdetail.component';
-import { ProductpageComponent } from './pages/productpage/productpage.component';
-import { ProductListComponent } from './product-list/product-list.component';
+import { ProductListComponent } from './components/product-list/product-list.component';
+import { ProductAddComponent } from './pages/admin/product-add/product-add.component';
+import { ProductEditComponent } from './pages/admin/product-edit/product-edit.component';
+import { HomePageComponent } from './pages/home-page/home-page.component';
+import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
+import { ProductPageComponent } from './pages/product-page/product-page.component';
+
 
 const routes: Routes = [
   {
-    path: "", component: HomepageComponent , children: [
-      { path: "product", component: ProductpageComponent },
-      { path: "product/:id", component: ProductdetailComponent }
+    path:"", component: HomePageComponent, children:[
+      { path:"product", component: ProductPageComponent},
+      { path:"product/:id", component: ProductDetailComponent},
     ]
   },
   {
-    path: "admin", component: DashboardComponent, children: [
-      { path: "product", component: ProductListComponent },
-      { path: "product/add", component: ProductaddComponent },
-      { path: "product/:id/edit", component: ProducteditComponent },
+    path:"admin", children: [
+      {path:"product", component: ProductListComponent},
+      {path:"product/add", component: ProductAddComponent},
+      {path:"product/:id/edit", component: ProductEditComponent}
     ]
   }
 ]
